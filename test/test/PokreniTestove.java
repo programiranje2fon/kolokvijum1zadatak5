@@ -19,8 +19,7 @@ public class PokreniTestove {
 	public static void main(String[] args) {
 		runTestsForClass(prodavnica.gume.VrstaGumeTest.class);
 		runTestsForClass(prodavnica.gume.GumaTest.class);
-		//runTestsForClass(eksponati.skulpture.SkulpturaTest.class);
-		//runTestsForClass(galerija.GalerijaTest.class);
+		runTestsForClass(prodavnica.ProdavnicaAutoDelovaTest.class);
 		runTestsForClass(ispravka_koda.Ispisivac3Test.class);
 	}
 
