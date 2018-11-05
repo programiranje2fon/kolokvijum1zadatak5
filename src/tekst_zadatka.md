@@ -2,7 +2,47 @@
 
 ** NAPOMENA: PO ZAVRŠETKU ZADATKA OBAVEZNO TESTIRATI REŠENJE POZIVANJEM AUTOMATIZOVANIH TESTOVA (desnim tasterom na naziv projekta, Run as - Java Application - PokreniTestove)**
 
+Napraviti javni nabrojivi tip **VrstaGume** u paketu **prodavnica.gume** koji ima instance:
 
+* LETNJA
+
+* ZIMSKA
+
+* SVE_SEZONE 
+
+Napraviti javnu klasu **Guma** u paketu **prodavnica.gume** koja ima:
+
+* Privatni atribut **marka**
+
+* Privatni atribut **vrstaGume** koji predstavlja instancu nabrojivog tipa VrstaGume.
+
+* Privatni atribut **sirina** koji predstavlja širinu gume (npr. 165)
+
+* Privatni atribut **visina** koji predstavlja visinu gume (npr. 55)
+
+* Privatni atribut **precnik** koji predstavlja prečnik gume (npr. 15)
+
+* Privatni atribut **stanje** koji predstavlja broj takvih guma na stanju u prodavnici.
+
+* Odgovarajuće javne get i set metode za ove atribute. Nedozvoljene vrednosti za atribut marka su null i prazan String. Širina gume treba da bude u rasponu od 135 do 265, visina od 45 do 85 a prečnik od 13 do 19. Stanje treba da bude nula ili veće. U slučaju unosa nedozvoljenih vrednosti potrebno je na ekranu ispisati reč "GRESKA".
+
+* Redefinisanu **equals** metodu klase Object koja proverava da li je zaista unet objekat klase Guma i vraća false ako nije. Ako jeste unet objekat te klase, metoda vraća true ako su atributi marka, vrsta gume, širina, visina i prečnik jednaki marki, vrsti gume, širini, visini i prečniku unete gume, a inače false.
+
+* Redefinisanu **toString** metodu klase Object koja vraća String sa svim podacima o gumi uz odgovarajuću poruku.
+
+Napraviti javnu klasu **ProdavnicaAutoDelova** u paketu **prodavnica** koja ima:
+
+* Privatni atribut **ponudaGuma** koji je niz objekata klase Guma.
+
+* Javni konstruktor koji inicijalizuje niz ponudaGuma na kapacitet 200.
+
+* Javnu metodu **pretrazi** koja kao parametre dobija: vrstu gume, širinu, visinu i prečnik gume pronalazi i ispisuje na ekranu sve podatke o gumama koje odgovaraju unetim parametrima. Ako takvih guma nema u prodavnici, ispisati na ekranu reč "NEMA".
+
+* Javnu metodu **unesiGumu** koja kao parametar prima objekat klase Guma i unosi ga u niz i to na prvo slobodno mesto (element na tom mestu ima NULL vrednost). Unošenje se vrši ako u nizu ne postoji ista guma. Ako u listi postoji ista guma (ista marka, vrsta, širina, visina i prečnik), onda se samo stanje preuzeto iz unetog objekta Guma (broj novih guma) dodaje na postojeće stanje odgovarajuće gume iz liste.
+
+* Javnu metodu **sastaviSpisakZaNabavku** sastavlja spisak za nabavku guma koje ponestaju na zalihama. Metoda nema parametre, a vraća niz objekata klase Guma u kojem se nalaze sve one gume iz niza ponudaGuma kojima je stanje 2 ili manje. Niz treba da bude tačno onolike dužine koliko takvih guma ima. Ako takvih guma nema, vratiti null.
+
+Napraviti javnu klasu **ProbaProdavnicaAutoDelova** u paketu **prodavnica.proba** koja u main metodu pravi jedan objekat klase ProdavnicaAutoDelova i u njega unosi tri gume: zimsku "Kleber" širine 195 visine 65 i prečnika 15 (stanje 10), letnju "Hankook" širine 165 visine 65 i prečnika 14 (stanje 20) i "Goodyear" za sve sezone širine 185 visine 60 i prečnika 15 (stanje 2). Ispisati na ekranu sve gume iz prodavnice koje je potrebno ponovo nabaviti, odnosno koje ponestaju na zalihama.
 
 # Zadatak 2 (ispravka koda)
 
