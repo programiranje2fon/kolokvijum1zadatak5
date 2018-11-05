@@ -17,8 +17,8 @@ import org.junit.runner.notification.Failure;
 public class PokreniTestove {
 
 	public static void main(String[] args) {
-		//runTestsForClass(eksponati.EksponatTest.class);
-		//runTestsForClass(eksponati.slike.SlikaTest.class);
+		runTestsForClass(prodavnica.gume.VrstaGumeTest.class);
+		runTestsForClass(prodavnica.gume.GumaTest.class);
 		//runTestsForClass(eksponati.skulpture.SkulpturaTest.class);
 		//runTestsForClass(galerija.GalerijaTest.class);
 		runTestsForClass(ispravka_koda.Ispisivac3Test.class);
