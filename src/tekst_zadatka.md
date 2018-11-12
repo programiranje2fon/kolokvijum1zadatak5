@@ -38,7 +38,7 @@ Napraviti javnu klasu **ProdavnicaAutoDelova** u paketu **prodavnica** koja ima:
 
 * Javnu metodu **pretrazi** koja kao parametre dobija: vrstu gume, širinu, visinu i prečnik gume pronalazi i ispisuje na ekranu sve podatke o gumama koje odgovaraju unetim parametrima. Ako takvih guma nema u prodavnici, ispisati na ekranu reč "NEMA".
 
-* Javnu metodu **unesiGumu** koja kao parametar prima objekat klase Guma i unosi ga u niz i to na prvo slobodno mesto (element na tom mestu ima NULL vrednost). Unošenje se vrši ako u nizu ne postoji ista guma. Ako u listi postoji ista guma (ista marka, vrsta, širina, visina i prečnik), onda se samo stanje preuzeto iz unetog objekta Guma (broj novih guma) dodaje na postojeće stanje odgovarajuće gume iz liste.
+* Javnu metodu **unesiGumu** koja kao parametar prima objekat klase Guma i unosi ga u niz i to na prvo slobodno mesto (element na tom mestu ima NULL vrednost). Unošenje se vrši ako u nizu ne postoji ista guma. Ako u nizu postoji ista guma (ista marka, vrsta, širina, visina i prečnik), onda se samo stanje preuzeto iz unetog objekta Guma (broj novih guma) dodaje na postojeće stanje odgovarajuće gume iz niza.
 
 * Javnu metodu **sastaviSpisakZaNabavku** sastavlja spisak za nabavku guma koje ponestaju na zalihama. Metoda nema parametre, a vraća niz objekata klase Guma u kojem se nalaze sve one gume iz niza ponudaGuma kojima je stanje 2 ili manje. Niz treba da bude tačno onolike dužine koliko takvih guma ima. Ako takvih guma nema, vratiti null.
 
