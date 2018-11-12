@@ -182,6 +182,74 @@ public class ProdavnicaAutoDelovaTest {
 	}
 	
 	@Test (timeout = 2000)
+	public void metoda_unesiGumu_DveSlicne() {
+		Guma g1 = new Guma();
+		g1.setMarka("Kleber");
+		g1.setVrstaGume(VrstaGume.ZIMSKA);
+		g1.setSirina(195);
+		g1.setVisina(65);
+		g1.setPrecnik(15);
+		g1.setStanje(10);
+		
+		instance.unesiGumu(g1);
+		
+		Guma g2 = new Guma();
+		g2.setMarka("Kleber");
+		g2.setVrstaGume(VrstaGume.LETNJA);
+		g2.setSirina(195);
+		g2.setVisina(65);
+		g2.setPrecnik(15);
+		g2.setStanje(10);
+		
+		instance.unesiGumu(g1);
+
+		Guma[] niz = (Guma[])TestUtil.getFieldValue(instance, "ponudaGuma");
+		
+		assertTrue("Kad se unose dve slicne gume \n"+g1+System.lineSeparator()
+		+g2+System.lineSeparator()+" metoda ne unosi prvu gumu na prvo slobodno mesto", g1 == niz[0]);
+		
+		assertTrue("Kad se unose dve slicne gume \n"+g1+System.lineSeparator()
+		+g2+System.lineSeparator()+" metoda ne unosi drugu gumu na drugo slobodno mesto", g1 == niz[0]);
+
+		for (int i=1; i<niz.length;i++)
+			assertEquals("Metoda greskom unosi novu gumu i na sva preostala prazna mesta", null, niz[i]);
+	}
+	
+	@Test (timeout = 2000)
+	public void metoda_unesiGumu_DveSlicne2() {
+		Guma g1 = new Guma();
+		g1.setMarka("Kleber");
+		g1.setVrstaGume(VrstaGume.ZIMSKA);
+		g1.setSirina(195);
+		g1.setVisina(65);
+		g1.setPrecnik(15);
+		g1.setStanje(10);
+		
+		instance.unesiGumu(g1);
+		
+		Guma g2 = new Guma();
+		g2.setMarka("Hankook");
+		g2.setVrstaGume(VrstaGume.ZIMSKA);
+		g2.setSirina(195);
+		g2.setVisina(65);
+		g2.setPrecnik(15);
+		g2.setStanje(10);
+		
+		instance.unesiGumu(g1);
+
+		Guma[] niz = (Guma[])TestUtil.getFieldValue(instance, "ponudaGuma");
+		
+		assertTrue("Kad se unose dve slicne gume \n"+g1+System.lineSeparator()
+		+g2+System.lineSeparator()+" metoda ne unosi prvu gumu na prvo slobodno mesto", g1 == niz[0]);
+		
+		assertTrue("Kad se unose dve slicne gume \n"+g1+System.lineSeparator()
+		+g2+System.lineSeparator()+" metoda ne unosi drugu gumu na drugo slobodno mesto", g1 == niz[0]);
+
+		for (int i=1; i<niz.length;i++)
+			assertEquals("Metoda greskom unosi novu gumu i na sva preostala prazna mesta", null, niz[i]);
+	}
+
+	@Test (timeout = 2000)
 	public void metoda_unesiGumu_VecPostoji() {
 		Guma g1 = new Guma();
 		g1.setMarka("Kleber");
