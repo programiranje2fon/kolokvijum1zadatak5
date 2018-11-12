@@ -211,7 +211,7 @@ public class ProdavnicaAutoDelovaTest {
 		assertTrue("Kad se unose dve slicne gume \n"+g1+System.lineSeparator()
 		+g2+System.lineSeparator()+" metoda ne unosi drugu gumu na drugo slobodno mesto", g2 == niz[1]);
 
-		for (int i=1; i<niz.length;i++)
+		for (int i=2; i<niz.length;i++)
 			assertEquals("Metoda greskom unosi novu gumu i na sva preostala prazna mesta", null, niz[i]);
 	}
 	
@@ -245,7 +245,7 @@ public class ProdavnicaAutoDelovaTest {
 		assertTrue("Kad se unose dve slicne gume \n"+g1+System.lineSeparator()
 		+g2+System.lineSeparator()+" metoda ne unosi drugu gumu na drugo slobodno mesto", g2 == niz[1]);
 
-		for (int i=1; i<niz.length;i++)
+		for (int i=2; i<niz.length;i++)
 			assertEquals("Metoda greskom unosi novu gumu i na sva preostala prazna mesta", null, niz[i]);
 	}
 
