@@ -201,7 +201,7 @@ public class ProdavnicaAutoDelovaTest {
 		g2.setPrecnik(15);
 		g2.setStanje(10);
 		
-		instance.unesiGumu(g1);
+		instance.unesiGumu(g2);
 
 		Guma[] niz = (Guma[])TestUtil.getFieldValue(instance, "ponudaGuma");
 		
@@ -209,7 +209,7 @@ public class ProdavnicaAutoDelovaTest {
 		+g2+System.lineSeparator()+" metoda ne unosi prvu gumu na prvo slobodno mesto", g1 == niz[0]);
 		
 		assertTrue("Kad se unose dve slicne gume \n"+g1+System.lineSeparator()
-		+g2+System.lineSeparator()+" metoda ne unosi drugu gumu na drugo slobodno mesto", g1 == niz[0]);
+		+g2+System.lineSeparator()+" metoda ne unosi drugu gumu na drugo slobodno mesto", g2 == niz[1]);
 
 		for (int i=1; i<niz.length;i++)
 			assertEquals("Metoda greskom unosi novu gumu i na sva preostala prazna mesta", null, niz[i]);
@@ -235,7 +235,7 @@ public class ProdavnicaAutoDelovaTest {
 		g2.setPrecnik(15);
 		g2.setStanje(10);
 		
-		instance.unesiGumu(g1);
+		instance.unesiGumu(g2);
 
 		Guma[] niz = (Guma[])TestUtil.getFieldValue(instance, "ponudaGuma");
 		
@@ -243,7 +243,7 @@ public class ProdavnicaAutoDelovaTest {
 		+g2+System.lineSeparator()+" metoda ne unosi prvu gumu na prvo slobodno mesto", g1 == niz[0]);
 		
 		assertTrue("Kad se unose dve slicne gume \n"+g1+System.lineSeparator()
-		+g2+System.lineSeparator()+" metoda ne unosi drugu gumu na drugo slobodno mesto", g1 == niz[0]);
+		+g2+System.lineSeparator()+" metoda ne unosi drugu gumu na drugo slobodno mesto", g2 == niz[1]);
 
 		for (int i=1; i<niz.length;i++)
 			assertEquals("Metoda greskom unosi novu gumu i na sva preostala prazna mesta", null, niz[i]);
